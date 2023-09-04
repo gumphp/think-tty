@@ -12,6 +12,7 @@ class TtyService extends Service
 
     public function boot()
     {
+        $this->loadRoutesFrom(__DIR__ . '/../route/tty.php');
         $this->commands([
             \gumphp\tty\TtyCommand::class,
         ]);
